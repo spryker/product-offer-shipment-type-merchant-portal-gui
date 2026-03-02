@@ -25,9 +25,6 @@ use Twig\Environment;
  */
 class ProductOfferShipmentTypeMerchantPortalGuiCommunicationFactory extends AbstractCommunicationFactory
 {
-    /**
-     * @return \Spryker\Zed\ProductOfferShipmentTypeMerchantPortalGui\Communication\Expander\ShipmentTypeProductOfferFormExpanderInterface
-     */
     public function createShipmentTypeProductOfferFormExpander(): ShipmentTypeProductOfferFormExpanderInterface
     {
         return new ShipmentTypeProductOfferFormExpander(
@@ -36,9 +33,6 @@ class ProductOfferShipmentTypeMerchantPortalGuiCommunicationFactory extends Abst
         );
     }
 
-    /**
-     * @return \Spryker\Zed\ProductOfferShipmentTypeMerchantPortalGui\Communication\Form\DataProvider\ShipmentTypeProductOfferDataProviderInterface
-     */
     public function createShipmentTypeProductOfferDataProvider(): ShipmentTypeProductOfferDataProviderInterface
     {
         return new ShipmentTypeProductOfferDataProvider($this->getShipmentTypeFacade());
@@ -52,25 +46,16 @@ class ProductOfferShipmentTypeMerchantPortalGuiCommunicationFactory extends Abst
         return new ShipmentTypeDataTransformer();
     }
 
-    /**
-     * @return \Spryker\Zed\ProductOfferShipmentTypeMerchantPortalGui\Communication\Expander\ShipmentTypeProductOfferFormViewExpanderInterface
-     */
     public function createShipmentTypeProductOfferFormViewExpander(): ShipmentTypeProductOfferFormViewExpanderInterface
     {
         return new ShipmentTypeProductOfferFormViewExpander($this->getTwigEnvironment());
     }
 
-    /**
-     * @return \Spryker\Zed\ProductOfferShipmentTypeMerchantPortalGui\Dependency\Facade\ProductOfferShipmentTypeMerchantPortalGuiToShipmentTypeFacadeInterface
-     */
     public function getShipmentTypeFacade(): ProductOfferShipmentTypeMerchantPortalGuiToShipmentTypeFacadeInterface
     {
         return $this->getProvidedDependency(ProductOfferShipmentTypeMerchantPortalGuiDependencyProvider::FACADE_SHIPMENT_TYPE);
     }
 
-    /**
-     * @return \Twig\Environment
-     */
     public function getTwigEnvironment(): Environment
     {
         return $this->getProvidedDependency(ProductOfferShipmentTypeMerchantPortalGuiDependencyProvider::SERVICE_TWIG);

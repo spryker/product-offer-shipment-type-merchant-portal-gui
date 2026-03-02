@@ -12,12 +12,6 @@ use Symfony\Component\Form\FormView;
 
 interface ShipmentTypeProductOfferFormViewExpanderInterface
 {
-    /**
-     * @param \Symfony\Component\Form\FormView $formView
-     * @param \Generated\Shared\Transfer\ProductOfferFormViewCollectionTransfer $productOfferFormViewCollectionTransfer
-     *
-     * @return \Generated\Shared\Transfer\ProductOfferFormViewCollectionTransfer
-     */
     public function expand(
         FormView $formView,
         ProductOfferFormViewCollectionTransfer $productOfferFormViewCollectionTransfer

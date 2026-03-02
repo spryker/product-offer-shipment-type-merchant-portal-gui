@@ -24,9 +24,6 @@ class ShipmentTypeProductOfferDataProvider implements ShipmentTypeProductOfferDa
      */
     protected ProductOfferShipmentTypeMerchantPortalGuiToShipmentTypeFacadeInterface $shipmentTypeFacade;
 
-    /**
-     * @param \Spryker\Zed\ProductOfferShipmentTypeMerchantPortalGui\Dependency\Facade\ProductOfferShipmentTypeMerchantPortalGuiToShipmentTypeFacadeInterface $shipmentTypeFacade
-     */
     public function __construct(ProductOfferShipmentTypeMerchantPortalGuiToShipmentTypeFacadeInterface $shipmentTypeFacade)
     {
         $this->shipmentTypeFacade = $shipmentTypeFacade;
@@ -47,9 +44,6 @@ class ShipmentTypeProductOfferDataProvider implements ShipmentTypeProductOfferDa
         return $shipmentTypeChoices;
     }
 
-    /**
-     * @return \Generated\Shared\Transfer\ShipmentTypeCollectionTransfer
-     */
     protected function getShipmentTypeCollection(): ShipmentTypeCollectionTransfer
     {
         $shipmentTypeCriteriaTransfer = new ShipmentTypeCriteriaTransfer();
@@ -57,11 +51,6 @@ class ShipmentTypeProductOfferDataProvider implements ShipmentTypeProductOfferDa
         return $this->shipmentTypeFacade->getShipmentTypeCollection($shipmentTypeCriteriaTransfer);
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\ShipmentTypeTransfer $shipmentTypeTransfer
-     *
-     * @return string
-     */
     protected function getShipmentTypeChoiceName(ShipmentTypeTransfer $shipmentTypeTransfer): string
     {
         return sprintf(

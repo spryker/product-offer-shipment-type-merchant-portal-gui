@@ -28,11 +28,6 @@ class ProductOfferShipmentTypeMerchantPortalGuiDependencyProvider extends Abstra
      */
     public const SERVICE_TWIG = 'twig';
 
-    /**
-     * @param \Spryker\Zed\Kernel\Container $container
-     *
-     * @return \Spryker\Zed\Kernel\Container
-     */
     public function provideCommunicationLayerDependencies(Container $container): Container
     {
         $container = parent::provideCommunicationLayerDependencies($container);
@@ -42,11 +37,6 @@ class ProductOfferShipmentTypeMerchantPortalGuiDependencyProvider extends Abstra
         return $container;
     }
 
-    /**
-     * @param \Spryker\Zed\Kernel\Container $container
-     *
-     * @return \Spryker\Zed\Kernel\Container
-     */
     protected function addShipmentTypeFacade(Container $container): Container
     {
         $container->set(static::FACADE_SHIPMENT_TYPE, function (Container $container) {
@@ -58,11 +48,6 @@ class ProductOfferShipmentTypeMerchantPortalGuiDependencyProvider extends Abstra
         return $container;
     }
 
-    /**
-     * @param \Spryker\Zed\Kernel\Container $container
-     *
-     * @return \Spryker\Zed\Kernel\Container
-     */
     protected function addTwigEnvironment(Container $container): Container
     {
         $container->set(static::SERVICE_TWIG, function (Container $container) {

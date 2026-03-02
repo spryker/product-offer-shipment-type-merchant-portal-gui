@@ -24,20 +24,11 @@ class ShipmentTypeProductOfferFormViewExpander implements ShipmentTypeProductOff
      */
     protected Environment $twigEnvironment;
 
-    /**
-     * @param \Twig\Environment $twigEnvironment
-     */
     public function __construct(Environment $twigEnvironment)
     {
         $this->twigEnvironment = $twigEnvironment;
     }
 
-    /**
-     * @param \Symfony\Component\Form\FormView $formView
-     * @param \Generated\Shared\Transfer\ProductOfferFormViewCollectionTransfer $productOfferFormViewCollectionTransfer
-     *
-     * @return \Generated\Shared\Transfer\ProductOfferFormViewCollectionTransfer
-     */
     public function expand(
         FormView $formView,
         ProductOfferFormViewCollectionTransfer $productOfferFormViewCollectionTransfer
